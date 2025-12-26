@@ -1,6 +1,7 @@
 package com.example.demo.entity;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.*;
+@Entity
 class user{
     private String name;
     @Column(unique=true)
@@ -8,13 +9,13 @@ class user{
     String getName(){
         return name;
     }
-    String setName(String name){
+    void setName(String name){
         this.name=name;
     }
     String getEmail(){
         return email;
     }
-    String setEmail(String email){
+    void setEmail(String email){
         this.email=email;
     }
     public user(){}
