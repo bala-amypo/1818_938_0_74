@@ -2,12 +2,13 @@ package com.example.demo.entity;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Column;
 import jakarta.validation.constraints.NotNull;
-import java.persistence.GenerationType;
-import java.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persitence
 @Entity
 class user{
-    @Id;
-    @GeneratedType(GenerationValue)
+    @Id
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Long id;
     private String name;
     @Column(unique=true)
