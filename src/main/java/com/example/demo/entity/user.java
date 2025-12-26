@@ -1,6 +1,7 @@
 package com.example.demo.entity;
-import jakarta.persistence.*;
-import jakarta.validation.constraints.*;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Column;
+import jakarta.validation.constraints.NotNull;
 @Entity
 class user{
     private String name;
