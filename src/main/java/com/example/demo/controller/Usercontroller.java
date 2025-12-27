@@ -24,4 +24,7 @@ public class Usercontroller{
         public UpdateOne(@PathVariable Long id,@RequestBody User user){
             return obj.updateone(id,data);
         }
+    @DeleteMapping("/delete/{id}")
+    ResponseEntity<String> DeleteUser(@PathVariable Long id)
+    
 }

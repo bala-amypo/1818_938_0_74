@@ -26,7 +26,11 @@ class Userserviceimpl implements UserService{
         User obj1=obj.findById(id)
             .orElseThrow(()-> new RuntimeException("No user Found"));
             if(data.getEmail()!=null){
-
+                obj1.setEmail(data.getEmail());
             }
+            if(data.getName()!=null){
+                obj1.setName(data.getName());
+            }
+        return obj.save(obj1);
     }
 }
