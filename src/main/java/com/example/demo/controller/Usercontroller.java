@@ -17,8 +17,8 @@ public class Usercontroller{
         return obj.getById(id);
         }
     @PutMapping("/updateuser/{id}"){
-        public updateUser(@PathVariable Long id,@RequestBody User user){
-            
+        public UpdateUser(@PathVariable Long id,@RequestBody User user){
+            return obj.updateUser(Long id,User data);
         }
     }
 }
