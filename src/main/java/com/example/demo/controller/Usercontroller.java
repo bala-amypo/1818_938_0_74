@@ -17,11 +17,11 @@ public class Usercontroller{
         return obj.getById(id);
         }
     @PutMapping("/updateuser/{id}")
-        public UpdateUser(@PathVariable Long id,@RequestBody User user){
-            return obj.updateUser(Long id,User data);
+        public User UpdateUser(@PathVariable Long id,@RequestBody User user){
+            return obj.updateUser(id,data);
         }
     @PatchMapping("/updateOne/{id}")
-        public UpdateOne(@PathVariable Long id,@RequestBody User user){
+        public User UpdateOne(@PathVariable Long id,@RequestBody User user){
             return obj.updateone(id,data);
         }
     @DeleteMapping("/delete/{id}")
