@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 class Userserviceimpl implements UserService{
     @Autowired
     Userrepository obj;
+    
     public User getById(Long id){
         return obj.findById(id).orElse(null);
     }

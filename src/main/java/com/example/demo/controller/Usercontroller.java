@@ -18,15 +18,15 @@ public class Usercontroller{
         }
     @PutMapping("/updateuser/{id}")
         public User UpdateUser(@PathVariable Long id,@RequestBody User user){
-            return obj.updateUser(id,data);
+            return obj.updateUser(id,user);
         }
     @PatchMapping("/updateOne/{id}")
         public User UpdateOne(@PathVariable Long id,@RequestBody User user){
-            return obj.updateone(id,data);
+            return obj.updateone(id,user);
         }
     @DeleteMapping("/delete/{id}")
     ResponseEntity<String> DeleteUser(@PathVariable Long id){
-        obj.deleteUser(Long id);
+        obj.deleteUser(id);
         return ResponseEntity.ok("Deletion is Sucessfull");
     }
 }
