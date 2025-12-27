@@ -15,5 +15,9 @@ class Userserviceimpl implements UserService{
     public User create(User data){
         return obj.save(data);
     }
-    public 
+    public updateUser(Long id,User data){
+        User obj1=obj.findById(id)
+        .orElseThow(()-> new RuntimeException("No user is found"));
+        obj1.setEmail(data.getEmail())
+    }
 }
