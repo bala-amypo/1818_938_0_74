@@ -34,8 +34,8 @@ class Userserviceimpl implements UserService{
         return obj.save(obj1);
     }
     public void deleteUser(Long id){
-        User obj=obj.deleteById(id)
-            .orElseThrow(()-> new RunTimeException("No user Found"));
+        if(!obj.findById(id)){
+            throw new RunTimeException("No Id id found");}
         
     }
 }
