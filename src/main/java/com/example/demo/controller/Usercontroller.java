@@ -20,9 +20,8 @@ public class Usercontroller{
         public UpdateUser(@PathVariable Long id,@RequestBody User user){
             return obj.updateUser(Long id,User data);
         }
-    @PatchMapping("/updateOne/{id}"){
+    @PatchMapping("/updateOne/{id}")
         public UpdateOne(@PathVariable Long id,@RequestBody User user){
             return obj.updateone(id,data);
         }
-    }
 }

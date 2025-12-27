@@ -22,4 +22,11 @@ class Userserviceimpl implements UserService{
         obj1.setName(data.getName());
         return obj.save(obj1);
     }
+    public User updateone(Long id,User data){
+        User obj1=obj.findById(id)
+            .orElseThrow(()-> new RuntimeException("No user Found"));
+            if(data.getEmail()!=null){
+
+            }
+    }
 }
