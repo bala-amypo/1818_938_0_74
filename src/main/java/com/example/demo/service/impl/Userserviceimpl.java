@@ -9,7 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 class Userserviceimpl implements UserService{
     @Autowired
     Userrepository obj;
-    
+
     public User getById(Long id){
         return obj.findById(id).orElse(null);
     }
@@ -26,17 +26,17 @@ class Userserviceimpl implements UserService{
     public User updateone(Long id,User data){
         User obj1=obj.findById(id)
             .orElseThrow(()-> new RuntimeException("No user Found"));
-            if(data.getEmail()!=null){
+            if(data.getEmail().equals(null)){
                 obj1.setEmail(data.getEmail());
             }
-            if(data.getName()!=null){
+            if(data.getName().equals(null)){
                 obj1.setName(data.getName());
             }
         return obj.save(obj1);
     }
     public void deleteUser(Long id){
         if(!obj.findById(id)){
-            throw new RunTimeException("No Id id found");}
+            throw new RuntimeException("No Id id found");}
         obj.deleteById(id);
         
     }
