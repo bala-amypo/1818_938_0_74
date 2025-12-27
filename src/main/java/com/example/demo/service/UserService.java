@@ -4,4 +4,5 @@ public interface UserService{
     User getById(Long id);
     User create(User data);
     User updateUser(Long id,User data);
+    User updateone(Long id,User data);
 }
