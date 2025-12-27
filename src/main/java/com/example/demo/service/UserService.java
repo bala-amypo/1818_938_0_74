@@ -5,4 +5,5 @@ public interface UserService{
     User create(User data);
     User updateUser(Long id,User data);
     User updateone(Long id,User data);
+    void deleteUser(Long id);
 }
