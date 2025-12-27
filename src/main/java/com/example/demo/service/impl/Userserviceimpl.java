@@ -26,10 +26,10 @@ class Userserviceimpl implements UserService{
     public User updateone(Long id,User data){
         User obj1=obj.findById(id)
             .orElseThrow(()-> new RuntimeException("No user Found"));
-            if(data.getEmail().equals(null)){
+            if(data.getEmail()!=null){
                 obj1.setEmail(data.getEmail());
             }
-            if(data.getName().equals(null)){
+            if(data.getName()!=null){
                 obj1.setName(data.getName());
             }
         return obj.save(obj1);
